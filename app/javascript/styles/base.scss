@@ -1,0 +1,121 @@
+@import "mixin";
+
+a {
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #888;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-variant-ligatures: none;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", serif;
+  overflow-x: hidden;
+  color: $black;
+  font-weight: 500;
+}
+
+.gothic {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.none {
+  display: none;
+}
+
+.pc {
+  display: block !important;
+  @include tab {
+    display: none !important;
+  }
+}
+
+.tab {
+  display: none !important;
+  @include tab {
+    display: block !important;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  @include center;
+  padding: 0 40px;
+  @include pc {
+    padding: 0 calc(40vw / (1280 / 100));
+  }
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flex {
+  @include flex;
+}
+
+.flex-low {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.flex-around {
+  @include flex-around;
+}
+
+.spacer-small {
+  height: 20px;
+}
+
+.spacer-medium {
+  height: 32px;
+}
+
+.spacer-large {
+  height: 60px;
+}
+
+.main {
+  padding: 80px 0 0;
+  @include tab {
+    padding: 72px 0 0;
+  }
+}
+
+.form-wrap {
+  max-width: 700px;
+  padding: 0 20px;
+  margin: 60px auto;
+}
+
+.page-logo {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 24px;
+  text-align: center;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.section-title {
+  font-size: 20px;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
+}
